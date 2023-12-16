@@ -1,6 +1,6 @@
 import './App.css'
 
-import './components/BannerCardItem/index'
+import BannerItems from './components/BannerCardItem/index'
 
 const bannerCardsList = [
   {
@@ -25,10 +25,10 @@ const bannerCardsList = [
 ]
 
 const App = () => (
-  <div>
-    <ul>
+  <div className="app-container">
+    <ul className="banner-cards-list">
       {bannerCardsList.map(eachItem => (
-        <BannerItems bannerCardItem={eachItem} />
+        <BannerItems bannerCardItem={eachItem} key={eachItem.id} />
       ))}
     </ul>
   </div>
